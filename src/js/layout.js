@@ -8,6 +8,7 @@ import { Single } from "./views/single";
 import { Planets } from "./views/planets";
 import { Characters } from "./views/characters";
 import injectContext from "./store/appContext";
+import 'semantic-ui-css/semantic.min.css';
 
 import { Navbar } from "./views/navbar";
 import { Footer } from "./component/footer";

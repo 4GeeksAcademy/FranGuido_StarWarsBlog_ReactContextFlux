@@ -12,7 +12,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+
+			// To be updated with action ""
+			characterStarWars: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -37,6 +40,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			// Fetching StarWars API
+			fetchCharacterStarWars: () =>{
+				fetch('https://www.swapi.tech/api/people')
+				.then(response => response.json())
+				.then(data => {setStore({characterStarWars: data.results})}).catch(err => err)
 			}
 		}
 	};

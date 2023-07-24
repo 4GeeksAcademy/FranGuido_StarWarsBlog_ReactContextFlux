@@ -65,6 +65,7 @@ export const Characters = () => {
                 <Link to={"/single/" + index}>
                   <button className="btn btn-warning">Learn more!</button>
                 </Link>
+                <button class="btn"><i class="fas fa-heart"></i></button>
               </div>
             </div>
           )

@@ -33,6 +33,7 @@ const injectContext = PassedComponent => {
 			 **/
 
 			state.actions.fetchCharacterStarWars();
+			state.actions.fetchPlanetsStarWars();
 		}, []); // load only once
 
 		// The initial value for the context is not null anymore, but the current state of this component,

@@ -42,12 +42,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ demo: demo });
 			},
 
-			// Fetching StarWars API
+			// Fetching StarWars API (characters)
 			fetchCharacterStarWars: () =>{
 				fetch('https://www.swapi.tech/api/people')
 				.then(response => response.json())
 				.then(data => {setStore({characterStarWars: data.results})}).catch(err => err)
-			}
+			},
+
+			// Fetching StarWars API (planets)
+			fetchPlanetsStarWars: () =>{
+				fetch('https://www.swapi.tech/api/planets')
+				.then(response => response.json())
+				.then(data => {setStore({planetsStarWars: data.results})}).catch(err => err)
+			},
+			
 		}
 	};
 };

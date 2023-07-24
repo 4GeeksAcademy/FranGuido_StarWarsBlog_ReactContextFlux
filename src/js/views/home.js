@@ -7,7 +7,14 @@ import { Planets } from "./planets";
 export const Home = () => (
 	<div className="container text-center mt-5">
 		
-			<Characters />
+		<div className="mt-4">
+			<Characters/>
+		</div>
+
+		<div className="mt-4">
+			<Planets/>
+		</div>	
+			
 			
 		
 	</div>
